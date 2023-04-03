@@ -1,0 +1,26 @@
+{
+  "name": "newness",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-modules server.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bottleneck": "^2.19.5",
+    "chalk": "^5.2.0",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.0.3",
+    "p-limit": "^4.0.0",
+    "pg": "^8.10.0",
+    "pupeteer": "^0.0.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-adblocker": "^2.13.6",
+    "puppeteer-extra-plugin-recaptcha": "^3.6.8",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "sleep": "^6.3.0"
+  }
+}
