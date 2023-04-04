@@ -62,6 +62,7 @@ const scrape = async () => {
       );
       const productList = await page.$$(".ProductCard");
 
+      // scrape product info page for all products on main page
       const productInfo = await Promise.all(
         productList.map(async (product) => {
           const brand = await product.$eval(
@@ -93,6 +94,7 @@ const scrape = async () => {
         break;
       }
 
+      // Scrape product details page to get ingredients and all all image urls
       for (let index = 0; index < productInfo.length; index++) {
         const info = productInfo[index];
         await limit(async () => {
@@ -134,7 +136,7 @@ const scrape = async () => {
           };
 
           try {
-            const res = await pool.query(query);
+            await pool.query(query);
             console.log(
               chalk.green(`Product ${info.name} inserted successfully!`)
             );
